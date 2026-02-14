@@ -1,0 +1,5 @@
+body { font-family: sans-serif; text-align: center; background: #f0f0f0; }
+#lobby, #game-screen { background: white; padding: 20px; border-radius: 10px; display: inline-block; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.choice-btn { font-size: 2rem; padding: 10px 20px; margin: 5px; cursor: pointer; }
+#result { font-weight: bold; font-size: 1.2rem; margin: 20px 0; white-space: pre-wrap; }
+#display-room-id { color: blue; font-weight: bold; }

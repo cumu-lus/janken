@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>オンラインじゃんけん（ルーム対応）</title>
+    <link rel="stylesheet" href="janken.css">
+</head>
+<body>
+    <h1>オンラインじゃんけん</h1>
+
+    <!-- ロビー画面 -->
+    <div id="lobby">
+        <button onclick="createRoom()">新しい部屋を作る</button>
+        <hr>
+        <input type="text" id="room-id-input" placeholder="ルームIDを入力">
+        <button onclick="joinRoom()">部屋に入る</button>
+    </div>
+
+    <!-- ゲーム画面（最初は隠しておく） -->
+    <div id="game-screen" style="display:none;">
+        <p>ルームID: <span id="display-room-id"></span></p>
+        <div id="status">相手を待っています...</div>
+        
+        <div id="game-area" style="display:none;">
+            <p>あなたの手：</p>
+            <button class="choice-btn" onclick="play('rock')">✊</button>
+            <button class="choice-btn" onclick="play('paper')">✋</button>
+            <button class="choice-btn" onclick="play('scissors')">✌️</button>
+        </div>
+        <div id="result"></div>
+        <button id="reset-btn" style="display:none;" onclick="resetGame()">もう一度遊ぶ</button>
+    </div>
+
+<!-- 修正前：9.x.x を 9.22.1 に書き換え -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+    <script src="janken.js"></script>
+</body>
+</html>
